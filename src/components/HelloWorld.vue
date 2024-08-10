@@ -4,7 +4,7 @@ import { ref } from 'vue'
 defineProps<{ msg: string }>()
 
 const count = ref(0)
-const increase = () => count.value++
+const increase = () => count.value+=2
 </script>
 
 <template>
