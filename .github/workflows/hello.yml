@@ -20,5 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Application tests
+        run: npm run test
+
       - name: Greeting
         run: echo "Znakomita robota! Workflow zakonczone." >> $GITHUB_STEP_SUMMARY
