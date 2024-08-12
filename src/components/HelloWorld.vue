@@ -11,7 +11,7 @@ const increase = () => count.value+=2
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="increase()">Count is {{ count }}.</button>
+    <button type="button" @click="increase()">Count is {{ count }}!</button>
   </div>
 
   <p>
