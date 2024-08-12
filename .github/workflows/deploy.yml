@@ -1,6 +1,6 @@
 # <project_root>/.github/workflows/deploy.yml
 
-name: Deploy to netlify
+name: Deploy to netlify and vercel
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
