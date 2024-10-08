@@ -33,7 +33,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to vercel
-        if: ${{ inputs.deploy-vercel }}
         run: |
           npm install --global vercel@canary
           vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
