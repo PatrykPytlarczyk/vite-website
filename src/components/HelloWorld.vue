@@ -15,7 +15,7 @@ const drawNumber = () => randomNumber.value = Math.floor(Math.random() * 100)
   <div class="card">
     <button type="button" @click="increase()">count is {{ count }}!</button>
   </div>
-  <button type="button" @click="drawNumber()">{{ randomNumber }}</button>
+  <div @click="drawNumber()">{{ randomNumber }}</div>
 
   <p>
     Check out
