@@ -4,7 +4,9 @@ import { ref } from 'vue'
 defineProps<{ msg: string }>()
 
 const count = ref(0)
-const increase = () => count.value+=2
+const increase = () => count.value+=3
+const randomNumber = ref(0)
+const drawNumber = () => randomNumber.value = Math.floor(Math.random() * 100)
 </script>
 
 <template>
@@ -13,6 +15,7 @@ const increase = () => count.value+=2
   <div class="card">
     <button type="button" @click="increase()">count is {{ count }}!</button>
   </div>
+  <div @click="drawNumber()">{{ randomNumber }}</div>
 
   <p>
     Check out
