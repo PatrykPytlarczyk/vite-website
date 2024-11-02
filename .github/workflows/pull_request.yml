@@ -38,3 +38,7 @@ jobs:
           vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
           vercel build --token=${{ secrets.VERCEL_TOKEN }}
           vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        
+      - name: Adding comment to pull request
+        run: |
+          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: application/json" -d '{"body": "Deployed to vercel: https://${{ secrets.VERCEL_PROJECT_ID }}-${{ secrets.VERCEL_ORG_ID }}.vercel.app"}' https://api.github.com/repos/persi-dev/vite-website/issues/${{ github.event.pull_request.number }}/comments
